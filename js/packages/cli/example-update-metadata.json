@@ -1,0 +1,40 @@
+[
+    {
+        "token_id" : "",
+        "name" : "",
+        "symbol" : "",
+        "uri": "",
+        "sellerFeeBasisPoints":"",
+        "creators": [
+            {
+                "address": "",
+                "verified" : false,
+                "share" : 100
+            },
+            {
+                "address": "candy_machine_wallet_address_as_this_is_update_authority",
+                "verified" : true,
+                "share" : 0
+            }
+        ]
+    },
+    {
+        "token_id" : "",
+        "name" : "",
+        "symbol" : "",
+        "uri": "",
+        "sellerFeeBasisPoints": "",
+        "creators": [
+            {
+                "address": "",
+                "verified" : false,
+                "share" : 100
+            },
+            {
+                "address": "candy_machine_wallet_address_as_this_is_update_authority",
+                "verified" : true,
+                "share" : 0
+            }
+        ]
+    }
+]

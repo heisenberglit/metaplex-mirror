@@ -32,6 +32,7 @@ import { signAllMetadataFromCandyMachine } from './commands/signAll';
 import log from 'loglevel';
 import { createMetadataFiles } from './helpers/metadata';
 import { createGenerativeArt } from './commands/createArt';
+import { updateMetadatas } from './commands/update-metadata';
 
 program.version('0.0.2');
 
@@ -680,6 +681,19 @@ programCommand('create_generative_art')
     await createGenerativeArt(configLocation, randomSets);
 
     log.info('Images have been created successfully!');
+  });
+
+
+  programCommand('update_metadata')
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  .option(
+    '-m, --metadata json file path check example-update-metadata.json <string>',
+    'Updates the metadata for a given json file. Provide the new URI,name,symbol,creators',
+  )
+  .action(async (directory, cmd) => {
+    const { keypair, metadata, env  } = cmd.opts();
+
+    await updateMetadatas(keypair, metadata, env);
   });
 
 function programCommand(name: string) {
